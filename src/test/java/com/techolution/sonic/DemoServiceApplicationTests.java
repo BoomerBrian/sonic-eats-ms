@@ -25,11 +25,6 @@ public class DemoServiceApplicationTests {
 
 
 	@Test
-	public void contextLoads() {
-		//
-	}
-
-	@Test
 	public void testProcessCheckOut() {
 		Product product = Mockito.mock(Product.class);
 		product.setProductDescription("Choclate Brownie");
@@ -40,14 +35,4 @@ public class DemoServiceApplicationTests {
 		Assert.assertTrue(cartService.processCheckOut(products));
 	}
 
-    @Test
-    public void testProcessCheckOutWrongCondition() {
-        Product product = Mockito.mock(Product.class);
-        product.setProductDescription("Choclate Brownie");
-        product.setProductTitle("Brownie");
-        List<Product> products = new ArrayList<Product>();
-        products.add(product);
-        when(cartService.processCheckOut(products)).thenReturn(true);
-        Assert.assertFalse(cartService.processCheckOut(products));
-    }
 }
