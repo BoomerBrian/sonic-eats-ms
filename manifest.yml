@@ -1,0 +1,4 @@
+---
+applications:
+  name: the-new-hotness
+  buildpack: java_buildpack_offline
