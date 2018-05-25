@@ -14,5 +14,5 @@ outputs:
   - name: build-output
 
 run:
-  path: bash
+  path: sh
   args: [./sonic-eats-ms/build.sh]
